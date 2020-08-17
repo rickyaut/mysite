@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2020-08-18T09:19:29.817+10:00"
+        cq:lastModifiedBy="admin"
+        jcr:lastModified="{Date}2020-08-18T09:19:29.768+10:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Pet Store"
+        sling:resourceType="fd/fdm/gui/components/admin/fdmcloudservice/rest"
+        authenticationType="None"
+        dataSourceType="REST"
+        filename="swagger-petstore.json"
+        location="header"
+        name="pet-store"
+        selectAuthentication="None"
+        selectHeader="Authorization Bearer"
+        serviceEndPoint="https://petstore.swagger.io/v2"
+        swaggerSource="swaggerFile">
+        <swaggerFile/>
+    </jcr:content>
+</jcr:root>
