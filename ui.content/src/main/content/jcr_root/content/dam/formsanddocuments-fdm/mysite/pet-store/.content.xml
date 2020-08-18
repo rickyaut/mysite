@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="dam:Asset">
+    <jcr:content
+        cq:conf="/conf/mysite"
+        jcr:lastModified="{Date}2020-08-18T09:27:23.440+10:00"
+        jcr:primaryType="dam:AssetContent"
+        sling:resourceType="fd/fm/fdm/render"
+        type="formdatamodel">
+        <metadata
+            jcr:primaryType="nt:unstructured"
+            author="admin"
+            title="Pet Store"
+            uiModel="\{&quot;models&quot;:{&quot;Order&quot;:{&quot;x&quot;:40,&quot;y&quot;:80},&quot;Category&quot;:{&quot;x&quot;:280,&quot;y&quot;:80},&quot;User&quot;:{&quot;x&quot;:520,&quot;y&quot;:80},&quot;Tag&quot;:{&quot;x&quot;:760,&quot;y&quot;:80},&quot;Pet&quot;:{&quot;x&quot;:1000,&quot;y&quot;:80},&quot;ApiResponse&quot;:{&quot;x&quot;:1240,&quot;y&quot;:80}}}"/>
+    </jcr:content>
+</jcr:root>
