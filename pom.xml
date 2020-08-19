@@ -733,6 +733,11 @@ Bundle-DocURL:
                 <version>1.9.8</version>
                 <scope>provided</scope>
             </dependency>
+            <dependency>
+                <groupId>com.adobe.acs</groupId>
+                <artifactId>acs-aem-commons-bundle</artifactId>
+                <version>4.8.4</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
