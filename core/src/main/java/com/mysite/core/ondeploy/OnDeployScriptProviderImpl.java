@@ -28,7 +28,7 @@ public class OnDeployScriptProviderImpl implements OnDeployScriptProvider {
     @Override
     public final List<OnDeployScript> getScripts() {
         return Arrays.asList(
-                new MyScript1()
+                new MyScript1(), new EnsureOakIndexScript()
         );
     }
 }
