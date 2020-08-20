@@ -39,6 +39,18 @@
                             type="datetime"
                             fieldLabel="End Date Time"
                             name="./endDateTime"/>
+                    <mixinTypes
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="mixinTypes"
+                            path="/apps/mysite/global/dialog/touch/page/content/items/pageBasicTab/items/column/items/basic/items/mixinTypes"
+                            resourceType="granite/ui/components/foundation/form/hidden"
+                            sling:resourceType="granite/ui/components/coral/foundation/include"/>
+                    <mixinTypesHint
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="mixinTypesHint"
+                            path="/apps/mysite/global/dialog/touch/page/content/items/pageBasicTab/items/column/items/basic/items/mixinTypesHint"
+                            resourceType="granite/ui/components/foundation/form/hidden"
+                            sling:resourceType="granite/ui/components/coral/foundation/include"/>
                 </items>
             </column>
         </items>
