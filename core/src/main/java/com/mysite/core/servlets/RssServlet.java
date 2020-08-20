@@ -132,27 +132,19 @@ public class RssServlet extends SlingSafeMethodsServlet {
     private static class Event implements Cloneable {
         @XmlElement
         private String title, startDateTime, endDateTime;
+        @XmlElement
+        private String topics[];
 
         public Event() {
         }
 
-        public Event(String title, String startDateTime, String endDateTime) {
+        public Event(String title, String startDateTime, String endDateTime, String topics[]) {
             this.title = title;
             this.startDateTime = startDateTime;
             this.endDateTime = endDateTime;
+            this.topics = topics;
         }
 
-        public String getTitle() {
-            return title;
-        }
-
-        public String getStartDateTime() {
-            return startDateTime;
-        }
-
-        public String getEndDateTime() {
-            return endDateTime;
-        }
     }
 
     @Activate
@@ -204,7 +196,9 @@ public class RssServlet extends SlingSafeMethodsServlet {
                 allEvents.add(new Event(
                     ResourceUtils.getSinglePropertyValue(node, "title", String.class),
                     DateFormatUtils.format(ResourceUtils.getSinglePropertyValue(node, "startDateTime", Calendar.class), Constants.DATE_TIME_FORMAT),
-                    DateFormatUtils.format(ResourceUtils.getSinglePropertyValue(node, "endDateTime", Calendar.class), Constants.DATE_TIME_FORMAT)));
+                    DateFormatUtils.format(ResourceUtils.getSinglePropertyValue(node, "endDateTime", Calendar.class), Constants.DATE_TIME_FORMAT),
+                    ResourceUtils.getMultiPropertyValue(node, "topics", String.class))
+                );
             }
             ByteArrayOutputStream os = new ByteArrayOutputStream();
             marshaller.marshal(new Rss(new Channel(allEvents)), os);

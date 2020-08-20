@@ -4,12 +4,18 @@
         <p class="cmp-event__item-label">Title:</p>
         <pre class="cmp-event__item-output" data-cmp-hook-event="property">${properties.title}</pre>
     </div>
-    <div class="cmp-event__item" data-sly-use.model="com.mysite.core.models.EventModel" data-sly-test="${model.startDateTime}">
-        <p class="cmp-event__item-label">Start Date Time:</p>
-        <pre class="cmp-event__item-output" data-cmp-hook-event="model">${model.startDateTime}</pre>
-    </div>
-    <div class="cmp-event__item" data-sly-use.model="com.mysite.core.models.EventModel" data-sly-test="${model.endDateTime}">
-        <p class="cmp-event__item-label">End Date Time:</p>
-        <pre class="cmp-event__item-output" data-cmp-hook-event="model">${model.endDateTime}</pre>
+    <div data-sly-use.model="com.mysite.core.models.EventModel">
+        <div class="cmp-event__item" data-sly-test="${properties.topics}">
+            <p class="cmp-event__item-label">Topics:</p>
+            <pre class="cmp-event__item-output" data-cmp-hook-event="property" data-sly-list="${properties.topics}">${item}<sly data-sly-test="${!itemList.last}">, </sly></pre>
+        </div>
+        <div class="cmp-event__item" data-sly-test="${model.startDateTime}">
+            <p class="cmp-event__item-label">Start Date Time:</p>
+            <pre class="cmp-event__item-output" data-cmp-hook-event="model">${model.startDateTime}</pre>
+        </div>
+        <div class="cmp-event__item" data-sly-test="${model.endDateTime}">
+            <p class="cmp-event__item-label">End Date Time:</p>
+            <pre class="cmp-event__item-output" data-cmp-hook-event="model">${model.endDateTime}</pre>
+        </div>
     </div>
 </div>
