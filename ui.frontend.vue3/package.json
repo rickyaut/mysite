@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "dev": "vue-cli-service build --mode development && clientlib --verbose",
-    "prod": "vue-cli-service build --mode production && clientlib --verbose",
+    "dev": "vue-cli-service build --dest dest/clientlib-site --mode development && clientlib --verbose",
+    "prod": "vue-cli-service build --dest dest/clientlib-site --mode production && clientlib --verbose",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
