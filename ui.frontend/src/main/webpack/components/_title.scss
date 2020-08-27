@@ -1,3 +1,15 @@
 .cmp-title {}
 .cmp-title__text {}
 .cmp-title__link {}
+.cmp-title{font-family:'Roboto Slab',serif}
+.h1.cmp-title__text{font-size:2.375rem}
+.h2.cmp-title__text{font-size:1.875rem}
+.h3.cmp-title__text{font-size:1.5rem}
+.h4.cmp-title__text{font-size:1.25rem}
+.h5.cmp-title__text{font-size:1rem}
+.h6.cmp-title__text{font-size:.875rem}
+.cmp-title__link{text-decoration:none}
+.isobar-clean--light .cmp-title__link{color:#1473e6}
+.isobar-clean--light .cmp-title__link:hover{color:#1267cf}
+.isobar-clean--dark .cmp-title__link{color:#1473e6}
+.isobar-clean--dark .cmp-title__link:hover{color:#1267cf}

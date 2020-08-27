@@ -1,11 +1,22 @@
-.cmp-form-options {}
-.cmp-form-options__legend {}
-.cmp-form-options__field-label {}
-.cmp-form-options__field {}
-.cmp-form-options__field--checkbox {}
-.cmp-form-options__field--radio {}
-.cmp-form-options__field-description {}
-.cmp-form-options__label {}
-.cmp-form-options__drop-down-field {}
-.cmp-form-options__multi-drop-down-field {}
-.cmp-form-options__help-message {}
+//.cmp-form-options {}
+//.cmp-form-options__legend {}
+//.cmp-form-options__field-label {}
+//.cmp-form-options__field {}
+//.cmp-form-options__field--checkbox {}
+//.cmp-form-options__field--radio {}
+//.cmp-form-options__field-description {}
+//.cmp-form-options__label {}
+//.cmp-form-options__drop-down-field {}
+//.cmp-form-options__multi-drop-down-field {}
+//.cmp-form-options__help-message {}
+.cmp-form-options{margin:.625rem 0;padding:.3125rem .625rem;border:solid .0625rem;border-radius:.1875rem;min-width:9.375rem}
+.cmp-form-options .cmp-form-options__legend{padding:0 .3125rem}
+.cmp-form-options .cmp-form-options__label{padding:0 .625rem 0 0}
+.cmp-form-options .cmp-form-options__field-label{display:flex;align-items:center}
+.cmp-form-options .cmp-form-options__field-label input{margin-right:.625rem}
+.cmp-form-options .cmp-form-options__field--multi-drop-down{border:solid .0625rem;border-radius:.1875rem;float:right}
+.cmp-form-options .cmp-form-options__field--multi-drop-down option{padding:.125rem .3125rem}
+.cmp-form-options .cmp-form-options__help-message{margin:0;padding-top:.625rem}
+.options.aem-GridColumn.aem-GridColumn--default--12.cq-Editable-dom{padding-bottom:.625rem}
+@media only screen and (min-width:480px){.cmp-form-button{padding:.5rem 1.125rem;font-size:.75rem}
+}

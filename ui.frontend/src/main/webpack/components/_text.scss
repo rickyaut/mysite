@@ -1,2 +1,14 @@
-.cmp-text {}
-.cmp-text__paragraph {}
+//.cmp-text {}
+//.cmp-text__paragraph {}
+.cmp-text ul{margin:0 0 0 1.4375rem;padding:0;list-style:none}
+.cmp-text ul li{margin:.5rem 0 0 0;padding:0;text-indent:-1.4375rem}
+.cmp-text ul li:first-child{margin-top:0}
+.cmp-text ul li:before{content:'-';padding:0 .5rem}
+.cmp-text ol{margin:0 0 0 1.4375rem;padding:0}
+.cmp-text ol li{margin:.5rem 0 0 0}
+.cmp-text table{border-collapse:collapse;border:0}
+.cmp-text table td,.cmp-text table th{padding:.5rem .75rem;vertical-align:top;border:0;border-left:.0625rem solid;border-bottom:.0625rem solid}
+.cmp-text table td:first-child,.cmp-text table th:first-child{border-left:0}
+.cmp-text table thead th{border-bottom:.125rem solid}
+.isobar-clean--light .cmp-text table td,.isobar-clean--light .cmp-text table th{border-color:#e1e1e1}
+.isobar-clean--dark .cmp-text table td,.isobar-clean--dark .cmp-text table th{border-color:#505050}
