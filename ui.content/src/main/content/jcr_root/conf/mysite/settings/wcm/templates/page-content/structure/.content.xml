@@ -5,31 +5,31 @@
         cq:deviceGroups="[/etc/mobile/groups/responsive]"
         cq:template="/conf/mysite/settings/wcm/templates/page-content"
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="mysite/components/page">
+        sling:resourceType="mysite/components/structure/page">
         <root
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="mysite/components/container"
+            sling:resourceType="mysite/components/content/container"
             layout="simple">
             <experiencefragment-header
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="mysite/components/experiencefragment"
+                sling:resourceType="mysite/components/content/experiencefragment"
                 fragmentVariationPath="/content/experience-fragments/mysite/us/en/site/header/master"/>
             <container
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="mysite/components/container"
+                sling:resourceType="mysite/components/content/container"
                 layout="responsiveGrid">
                 <title
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="mysite/components/title"
+                    sling:resourceType="mysite/components/content/title"
                     editable="{Boolean}true"/>
                 <container
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="mysite/components/container"
+                    sling:resourceType="mysite/components/content/container"
                     editable="{Boolean}true"/>
             </container>
             <experiencefragment-footer
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="mysite/components/experiencefragment"
+                sling:resourceType="mysite/components/content/experiencefragment"
                 fragmentVariationPath="/content/experience-fragments/mysite/us/en/site/footer/master"/>
         </root>
         <cq:responsive jcr:primaryType="nt:unstructured">

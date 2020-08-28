@@ -74,7 +74,7 @@ import java.util.Map;
  */
 @Component(service = { Servlet.class })
 @SlingServletResourceTypes(
-        resourceTypes="mysite/components/page",
+        resourceTypes="mysite/components/structure/page",
         methods=HttpConstants.METHOD_GET,
         selectors = "rss",
         extensions="xml")
@@ -85,7 +85,7 @@ public class RssServlet extends SlingSafeMethodsServlet {
     private static final long serialVersionUID = 1L;
 
     private static final String PARAMETER_NAME_RESOURCETYPE = "resourceType";
-    private static final String RESOURCE_TYPE_EVENT_DETAILS = "mysite/components/event";
+    private static final String RESOURCE_TYPE_EVENT_DETAILS = "mysite/components/content/event";
     private static final String STATEMENT_EVENT_QUERY = "SELECT * FROM [nt:unstructured] AS s"
         + " WHERE ISDESCENDANTNODE([%s]) AND [sling:resourceType]=$" + PARAMETER_NAME_RESOURCETYPE;
     private static final String STATEMENT_EVENT_ORDER_BY = " ORDER BY startDateTime DESC";

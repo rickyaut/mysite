@@ -21,7 +21,7 @@ for file in Path('pages').rglob('*.xml'):
         eventDetail[0].attrib['startDateTime'] = startDateTime
         eventDetail[0].attrib['endDateTime'] = endDateTime
         prefix_map = {"sling": "http://sling.apache.org/jcr/sling/1.0"}
-        for element in tree.xpath(".//*[@sling:resourceType='mysite/components/event']", namespaces=prefix_map):
+        for element in tree.xpath(".//*[@sling:resourceType='mysite/components/content/event']", namespaces=prefix_map):
             try:
                 textTree = html.fromstring(element.get('text'))
                 for anchor in textTree.xpath("//a"):

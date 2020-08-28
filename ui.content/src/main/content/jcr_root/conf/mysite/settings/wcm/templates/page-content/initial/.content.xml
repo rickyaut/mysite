@@ -4,19 +4,19 @@
     <jcr:content
         cq:template="/conf/mysite/settings/wcm/templates/page-content"
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="mysite/components/page">
+        sling:resourceType="mysite/components/structure/page">
         <root
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="mysite/components/container">
+            sling:resourceType="mysite/components/content/container">
             <container
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="mysite/components/container">
+                sling:resourceType="mysite/components/content/container">
                 <title
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="mysite/components/title"/>
+                    sling:resourceType="mysite/components/content/title"/>
                 <container
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="mysite/components/container"
+                    sling:resourceType="mysite/components/content/container"
                     layout="responsiveGrid"/>
             </container>
         </root>

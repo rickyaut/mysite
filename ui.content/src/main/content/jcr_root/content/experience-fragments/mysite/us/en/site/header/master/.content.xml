@@ -8,26 +8,26 @@
         cq:xfVariantType="web"
         jcr:primaryType="cq:PageContent"
         jcr:title="Header"
-        sling:resourceType="mysite/components/xfpage">
+        sling:resourceType="mysite/components/structure/xfpage">
         <root
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="mysite/components/container"
+            sling:resourceType="mysite/components/content/container"
             layout="simple">
             <navigation
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="mysite/components/navigation"
+                sling:resourceType="mysite/components/structure/navigation"
                 collectAllPages="false"
                 navigationRoot="/content/mysite/us/en"
                 skipNavigationRoot="false"
                 structureDepth="1"/>
             <languagenavigation
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="mysite/components/languagenavigation"
+                sling:resourceType="mysite/components/structure/languagenavigation"
                 navigationRoot="/content/mysite/us"
                 structureDepth="2"/>
             <search
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="mysite/components/search"
+                sling:resourceType="mysite/components/content/search"
                 searchRoot="/content/mysite/us"/>
         </root>
     </jcr:content>
