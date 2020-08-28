@@ -82,7 +82,7 @@ module.exports = {
 
         // Copy all other files into the `resources` ClientLib directory
         resources: {
-          cwd: 'clientlib-site',
+          cwd: 'clientlib-site/resources',
           files: ['**/*.*'],
           flatten: false,
           ignore: ['**/*.js', '**/*.css']

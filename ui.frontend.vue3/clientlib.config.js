@@ -50,13 +50,13 @@ module.exports = {
         // Copy entrypoint scripts and stylesheets into the respective ClientLib
         // directories
         js: {
-          cwd: 'clientlib-dependencies/js',
-          files: ['**/*.js'],
+          cwd: 'clientlib-site/js',
+          files: ['**/*vendors.js'],
           flatten: false
         },
         css: {
-          cwd: 'clientlib-dependencies/css',
-          files: ['**/*.css'],
+          cwd: 'clientlib-site/css',
+          files: ['**/*vendors.css'],
           flatten: false
         }
       }
@@ -71,7 +71,7 @@ module.exports = {
         // directories
         js: {
           cwd: 'clientlib-site/js',
-          files: ['**/*.js'],
+          files: ['**/app.js'],
           flatten: false
         },
         css: {
