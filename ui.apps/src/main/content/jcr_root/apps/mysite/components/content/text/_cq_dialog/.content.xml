@@ -39,6 +39,9 @@
                                                     <format
                                                         jcr:primaryType="nt:unstructured"
                                                         features="bold,italic,underline"/>
+                                                    <findreplace
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
                                                     <justify
                                                         jcr:primaryType="nt:unstructured"
                                                         features="-"/>
@@ -128,7 +131,7 @@
                                                     <cui jcr:primaryType="nt:unstructured">
                                                         <inline
                                                             jcr:primaryType="nt:unstructured"
-                                                            toolbar="[format#bold,format#italic,format#underline,#justify,#lists,links#modifylink,links#unlink,#paraformat]">
+                                                            toolbar="[format#bold,format#italic,format#underline,#justify,#lists,links#modifylink,links#unlink,#paraformat,findreplace#find,findreplace#replace]">
                                                             <popovers jcr:primaryType="nt:unstructured">
                                                                 <justify
                                                                     jcr:primaryType="nt:unstructured"

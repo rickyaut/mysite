@@ -71,10 +71,10 @@
                         </crop>
                         <rotate
                             jcr:primaryType="nt:unstructured"
-                            features="right"/>
+                            features="*"/>
                         <flip
                             jcr:primaryType="nt:unstructured"
-                            features="-"/>
+                            features="*"/>
                     </plugins>
                 </policy_651483963895698>
             </image>
@@ -107,7 +107,7 @@
                         </paraformat>
                         <misctools
                             jcr:primaryType="nt:unstructured"
-                            features="-">
+                            features="*">
                             <specialCharsConfig jcr:primaryType="nt:unstructured">
                                 <chars
                                     jcr:primaryType="nt:unstructured"
@@ -136,34 +136,34 @@
                             features="-"/>
                         <findreplace
                             jcr:primaryType="nt:unstructured"
-                            features="-"/>
+                            features="*"/>
                         <undo
                             jcr:primaryType="nt:unstructured"
-                            features="-"/>
+                            features="*"/>
                         <spellcheck
                             jcr:primaryType="nt:unstructured"
-                            features="-"/>
+                            features="*"/>
                         <image
                             jcr:primaryType="nt:unstructured"
-                            features="-"/>
+                            features="*"/>
                         <table
                             jcr:primaryType="nt:unstructured"
-                            features="-"/>
+                            features="*"/>
                         <lists
                             jcr:primaryType="nt:unstructured"
                             features="*"/>
                         <justify
                             jcr:primaryType="nt:unstructured"
-                            features="-"/>
+                            features="*"/>
                         <format
                             jcr:primaryType="nt:unstructured"
-                            features="bold,italic"/>
+                            features="*"/>
                         <links
                             jcr:primaryType="nt:unstructured"
                             features="modifylink,unlink"/>
                         <subsuperscript
                             jcr:primaryType="nt:unstructured"
-                            features="-"/>
+                            features="*"/>
                     </rtePlugins>
                 </policy_641562756958017>
             </text>
