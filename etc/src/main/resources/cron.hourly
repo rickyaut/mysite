@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Configuration values
+PUBLISHER_IP=127.0.0.1
+LOG_DIR=/var/log/httpd
+MAPS=(
+  "redirect"
+)
+
+# Update the redirect maps
+for MAP_FILE in "${MAPS[@]}"
+do
+             :
+  rm /tmp/${MAP_FILE}.txt
+  cd /usr/local/apache2/conf
+  wget http://${PUBLISHER_IP}:4503/etc/acs-commons/redirect-maps/${MAP_FILE}/jcr:content.redirectmap.txt -O /usr/local/apache2/conf/${MAP_FILE}.txt >> ${LOG_DIR}/update-redirect-map.log 2>&1
+  #httxt2dbm -i /tmp/${MAP_FILE}.txt -o tmp-${MAP_FILE}map >> ${LOG_DIR}/update-redirect-map.log 2>&1
+  #mv tmp-${MAP_FILE}.map.dir ${MAP_FILE}map.dir
+  #mv tmp-${MAP_FILE}.map.pag ${MAP_FILE}map.pag
+done
