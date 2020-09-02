@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="sling:OsgiConfig"
+          datasource.name="mysite.datasource"
+          datasource.svc.prop.name="datasource.name"
+          driverClassName="com.mysql.jdbc.Driver"
+          username="mysite"
+          password="mysite"
+          url="jdbc:mysql://localhost:3306/mysite?useLegacyDatetimeCode=false;serverTimezone=Australia/Melbourne;useSSL=false;"
+/>
