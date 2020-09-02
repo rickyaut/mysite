@@ -286,7 +286,101 @@
                 id="Pet"
                 name="Pet"
                 required="[name,photoUrls]">
-                <links jcr:primaryType="nt:unstructured"/>
+                <links jcr:primaryType="nt:unstructured">
+                    <get_pet_petid_1597747491119
+                        fdm:source="source1"
+                        jcr:primaryType="nt:unstructured"
+                        description="Find pet by ID"
+                        genericOperation="{Boolean}false"
+                        href="petstore.swagger.io/v2"
+                        id="GET /pet/{petId}_1597747491119"
+                        method="GET"
+                        name="GET /pet/{petId}"
+                        rel="self">
+                        <fdm:data
+                            jcr:primaryType="nt:unstructured"
+                            petId="${request.attribute.petId}"/>
+                        <schema
+                            fdm:bindRef="schema"
+                            fdm:computed="{Boolean}false"
+                            fdm:nullable="{Boolean}true"
+                            fdm:primaryKey="{Boolean}false"
+                            fdm:protected="{Boolean}false"
+                            fdm:required="{Boolean}false"
+                            jcr:primaryType="nt:unstructured"
+                            description="operation input description"
+                            name="schema"
+                            type="object">
+                            <properties jcr:primaryType="nt:unstructured">
+                                <petId
+                                    fdm:bindRef="petId"
+                                    fdm:computed="{Boolean}false"
+                                    fdm:in="path"
+                                    fdm:nullable="{Boolean}true"
+                                    fdm:primaryKey="{Boolean}false"
+                                    fdm:protected="{Boolean}false"
+                                    fdm:required="{Boolean}true"
+                                    jcr:primaryType="nt:unstructured"
+                                    description="ID of pet to return"
+                                    format="int64"
+                                    name="petId"
+                                    type="integer"/>
+                            </properties>
+                        </schema>
+                        <targetSchema
+                            fdm:bindRef="Pet"
+                            fdm:computed="{Boolean}false"
+                            fdm:nullable="{Boolean}true"
+                            fdm:primaryKey="{Boolean}false"
+                            fdm:protected="{Boolean}false"
+                            fdm:required="{Boolean}false"
+                            jcr:primaryType="nt:unstructured"
+                            _x0024_ref="Pet"
+                            name="Pet"
+                            title="Pet"
+                            type="object"/>
+                    </get_pet_petid_1597747491119>
+                    <post_pet_1597747491119
+                        fdm:source="source1"
+                        jcr:primaryType="nt:unstructured"
+                        description="Add a new pet to the store"
+                        genericOperation="{Boolean}false"
+                        href="petstore.swagger.io/v2"
+                        id="POST /pet_1597747491119"
+                        method="POST"
+                        name="POST /pet"
+                        rel="self">
+                        <fdm:data jcr:primaryType="nt:unstructured"/>
+                        <schema
+                            fdm:bindRef="schema"
+                            fdm:computed="{Boolean}false"
+                            fdm:nullable="{Boolean}true"
+                            fdm:primaryKey="{Boolean}false"
+                            fdm:protected="{Boolean}false"
+                            fdm:required="{Boolean}false"
+                            jcr:primaryType="nt:unstructured"
+                            description="operation input description"
+                            name="schema"
+                            type="object">
+                            <properties jcr:primaryType="nt:unstructured">
+                                <Pet
+                                    fdm:bindRef="Pet"
+                                    fdm:computed="{Boolean}false"
+                                    fdm:in="body"
+                                    fdm:nullable="{Boolean}true"
+                                    fdm:primaryKey="{Boolean}false"
+                                    fdm:protected="{Boolean}false"
+                                    fdm:required="{Boolean}true"
+                                    jcr:primaryType="nt:unstructured"
+                                    _x0024_ref="Pet"
+                                    description="Pet object that needs to be added to the store"
+                                    name="Pet"
+                                    title="Pet"
+                                    type="object"/>
+                            </properties>
+                        </schema>
+                    </post_pet_1597747491119>
+                </links>
                 <properties jcr:primaryType="nt:unstructured">
                     <id
                         fdm:bindRef="id"
@@ -350,9 +444,17 @@
                         title="tags"
                         type="array">
                         <items
+                            fdm:binaryEntity="{Boolean}false"
+                            fdm:bindRef="items"
+                            fdm:defaultBinaryEntity="{Boolean}false"
+                            fdm:genericOperationAllowed="{Boolean}false"
+                            fdm:rootEntity="{Boolean}true"
                             jcr:primaryType="nt:unstructured"
                             _x0024_ref="Tag"
-                            type="object"/>
+                            name="items"
+                            type="object">
+                            <links jcr:primaryType="nt:unstructured"/>
+                        </items>
                     </tags>
                     <status
                         fdm:bindRef="status"
@@ -547,9 +649,17 @@
                     name="Pet"
                     type="array">
                     <items
+                        fdm:binaryEntity="{Boolean}false"
+                        fdm:bindRef="items"
+                        fdm:defaultBinaryEntity="{Boolean}false"
+                        fdm:genericOperationAllowed="{Boolean}false"
+                        fdm:rootEntity="{Boolean}true"
                         jcr:primaryType="nt:unstructured"
                         _x0024_ref="Pet"
-                        type="object"/>
+                        name="items"
+                        type="object">
+                        <links jcr:primaryType="nt:unstructured"/>
+                    </items>
                 </targetSchema>
             </get_pet_findbystatus>
             <get_pet_findbytags
@@ -603,9 +713,17 @@
                     name="Pet"
                     type="array">
                     <items
+                        fdm:binaryEntity="{Boolean}false"
+                        fdm:bindRef="items"
+                        fdm:defaultBinaryEntity="{Boolean}false"
+                        fdm:genericOperationAllowed="{Boolean}false"
+                        fdm:rootEntity="{Boolean}true"
                         jcr:primaryType="nt:unstructured"
                         _x0024_ref="Pet"
-                        type="object"/>
+                        name="items"
+                        type="object">
+                        <links jcr:primaryType="nt:unstructured"/>
+                    </items>
                 </targetSchema>
             </get_pet_findbytags>
             <get_pet_petid_
@@ -866,16 +984,26 @@
                     <properties jcr:primaryType="nt:unstructured"/>
                 </schema>
                 <targetSchema
+                    fdm:bindRef="targetSchema"
                     fdm:computed="{Boolean}false"
                     fdm:nullable="{Boolean}true"
                     fdm:primaryKey="{Boolean}false"
                     fdm:protected="{Boolean}false"
                     fdm:required="{Boolean}false"
                     jcr:primaryType="nt:unstructured"
+                    name="targetSchema"
                     type="object">
                     <items
+                        fdm:binaryEntity="{Boolean}false"
+                        fdm:bindRef="items"
+                        fdm:defaultBinaryEntity="{Boolean}false"
+                        fdm:genericOperationAllowed="{Boolean}false"
+                        fdm:rootEntity="{Boolean}true"
                         jcr:primaryType="nt:unstructured"
-                        type="integer"/>
+                        name="items"
+                        type="integer">
+                        <links jcr:primaryType="nt:unstructured"/>
+                    </items>
                 </targetSchema>
             </get_store_inventory>
             <post_store_order
@@ -1090,9 +1218,17 @@
                             name="User"
                             type="array">
                             <items
+                                fdm:binaryEntity="{Boolean}false"
+                                fdm:bindRef="items"
+                                fdm:defaultBinaryEntity="{Boolean}false"
+                                fdm:genericOperationAllowed="{Boolean}false"
+                                fdm:rootEntity="{Boolean}true"
                                 jcr:primaryType="nt:unstructured"
                                 _x0024_ref="User"
-                                type="object"/>
+                                name="items"
+                                type="object">
+                                <links jcr:primaryType="nt:unstructured"/>
+                            </items>
                         </User>
                     </properties>
                 </schema>
@@ -1132,9 +1268,17 @@
                             name="User"
                             type="array">
                             <items
+                                fdm:binaryEntity="{Boolean}false"
+                                fdm:bindRef="items"
+                                fdm:defaultBinaryEntity="{Boolean}false"
+                                fdm:genericOperationAllowed="{Boolean}false"
+                                fdm:rootEntity="{Boolean}true"
                                 jcr:primaryType="nt:unstructured"
                                 _x0024_ref="User"
-                                type="object"/>
+                                name="items"
+                                type="object">
+                                <links jcr:primaryType="nt:unstructured"/>
+                            </items>
                         </User>
                     </properties>
                 </schema>
@@ -1188,12 +1332,14 @@
                     </properties>
                 </schema>
                 <targetSchema
+                    fdm:bindRef="targetSchema"
                     fdm:computed="{Boolean}false"
                     fdm:nullable="{Boolean}true"
                     fdm:primaryKey="{Boolean}false"
                     fdm:protected="{Boolean}false"
                     fdm:required="{Boolean}false"
                     jcr:primaryType="nt:unstructured"
+                    name="targetSchema"
                     type="string"/>
             </get_user_login>
             <get_user_logout
