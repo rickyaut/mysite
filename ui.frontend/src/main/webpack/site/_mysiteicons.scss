@@ -1,0 +1,214 @@
+/*
+ *  Copyright 2018 Adobe Systems Incorporated
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+ 
+//** mysite Specific Fonts
+$icomoon-font-family: "mysite-icon-font" !default;
+$icomoon-font-path: "../resources/fonts" !default;
+
+$mysiteicon-menu: "\e916";
+$mysiteicon-google: "\e900";
+$mysiteicon-twitter: "\e901";
+$mysiteicon-facebook: "\e902";
+$mysiteicon-instagram: "\e903";
+$mysiteicon-social-share: "\e904";
+$mysiteicon-map: "\e905";
+$mysiteicon-alert: "\e906";
+$mysiteicon-download: "\e907";
+$mysiteicon-info: "\e908";
+$mysiteicon-email: "\e909";
+$mysiteicon-comment: "\e90a";
+$mysiteicon-share: "\e90b";
+$mysiteicon-user: "\e90c";
+$mysiteicon-home: "\e90d";
+$mysiteicon-right-arrow: "\e90e";
+$mysiteicon-left-arrow: "\e90f";
+$mysiteicon-minus: "\e910";
+$mysiteicon-plus: "\e911";
+$mysiteicon-location: "\e912";
+$mysiteicon-search: "\e913";
+$mysiteicon-delete: "\e914";
+$mysiteicon-cart: "\e915";
+$mysiteicon-lock: "\e98f";
+$mysiteicon-unlocked: "\e990";
+$mysiteicon-play3: "\ea1c";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?o7vuvy') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?o7vuvy') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?o7vuvy##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@mixin mysiteiconstyle(){
+   /* use !important to prevent issues with browser extensions that change fonts */
+   font-family: '#{$icomoon-font-family}' !important;
+   speak: none;
+   font-style: normal;
+   font-weight: normal;
+   font-variant: normal;
+   text-transform: none;
+   line-height: 1;
+   font-size: 1.25rem;
+   /* Better Font Rendering =========== */
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+[class$="__icon"], [class*="__icon"], [class$="-icon"], [class*="-icon"]{
+  @include mysiteiconstyle();
+}
+
+.mysiteicon-menu {
+  &:before {
+    content: $mysiteicon-menu; 
+  }
+}
+.mysiteicon-google {
+  &:before {
+    content: $mysiteicon-google; 
+  }
+}
+.mysiteicon-twitter {
+  &:before {
+    content: $mysiteicon-twitter; 
+  }
+}
+.mysiteicon-facebook {
+  &:before {
+    content: $mysiteicon-facebook; 
+  }
+}
+.mysiteicon-instagram {
+  &:before {
+    content: $mysiteicon-instagram; 
+  }
+}
+.mysiteicon-social-share {
+  &:before {
+    content: $mysiteicon-social-share; 
+  }
+}
+.mysiteicon-map {
+  &:before {
+    content: $mysiteicon-map; 
+  }
+}
+.mysiteicon-alert {
+  &:before {
+    content: $mysiteicon-alert; 
+  }
+}
+.mysiteicon-download {
+  &:before {
+    content: $mysiteicon-download; 
+  }
+}
+.mysiteicon-info {
+  &:before {
+    content: $mysiteicon-info; 
+  }
+}
+.mysiteicon-email {
+  &:before {
+    content: $mysiteicon-email; 
+  }
+}
+.mysiteicon-comment {
+  &:before {
+    content: $mysiteicon-comment; 
+  }
+}
+.mysiteicon-share {
+  &:before {
+    content: $mysiteicon-share; 
+  }
+}
+.mysiteicon-user {
+  &:before {
+    content: $mysiteicon-user; 
+  }
+}
+.mysiteicon-home {
+  &:before {
+    content: $mysiteicon-home; 
+  }
+}
+.mysiteicon-right-arrow {
+  &:before {
+    content: $mysiteicon-right-arrow; 
+  }
+}
+.mysiteicon-left-arrow {
+  &:before {
+    content: $mysiteicon-left-arrow; 
+  }
+}
+.mysiteicon-minus {
+  &:before {
+    content: $mysiteicon-minus; 
+  }
+}
+.mysiteicon-plus {
+  &:before {
+    content: $mysiteicon-plus; 
+  }
+}
+.mysiteicon-location {
+  &:before {
+    content: $mysiteicon-location; 
+  }
+}
+.mysiteicon-search {
+  &:before {
+    content: $mysiteicon-search; 
+  }
+}
+.mysiteicon-delete {
+  &:before {
+    content: $mysiteicon-delete; 
+  }
+}
+.mysiteicon-cart {
+  &:before {
+    content: $mysiteicon-cart; 
+  }
+}
+
+.mysiteicon-menu {
+  &:before {
+    content: $mysiteicon-menu; 
+  }
+}
+.mysiteicon-lock {
+  &:before {
+    content: $mysiteicon-lock; 
+  }
+}
+.mysiteicon-unlocked {
+  &:before {
+    content: $mysiteicon-unlocked; 
+  }
+}
+.mysiteicon-play3 {
+  &:before {
+    content: $mysiteicon-play3; 
+  }
+}
+
