@@ -36,4 +36,18 @@
 @import './styles/*.scss';
 @font-face{font-family:'Material Icons';font-style:normal;font-weight:400;src:local('Material Icons'),local('MaterialIcons-Regular'),url('/etc.clientlibs/mysite/clientlibs/clientlib-site/resources/fonts/material-icons.woff2') format('woff2'),url('clientlib-themes/core-components-clean/resources/fonts/material-icons.woff') format('woff'),url('clientlib-themes/core-components-clean/resources/fonts/material-icons.ttf') format('truetype')}
 @font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:url('clientlib-themes/core-components-clean/resources/fonts/roboto-v20-latin-regular.eot');src:local('Roboto'),local('Roboto-Regular'),url('clientlib-themes/core-components-clean/resources/fonts/roboto-v20-latin-regular.eot?#iefix') format('embedded-opentype'),url('/etc.clientlibs/mysite/clientlibs/clientlib-site/resources/fonts/roboto-v20-latin-regular.woff2') format('woff2'),url('clientlib-themes/core-components-clean/resources/fonts/roboto-v20-latin-regular.woff') format('woff'),url('clientlib-themes/core-components-clean/resources/fonts/roboto-v20-latin-regular.ttf') format('truetype'),url('clientlib-themes/core-components-clean/resources/fonts/roboto-v20-latin-regular.svg#Roboto') format('svg')}
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/etc.clientlibs/mysite/clientlibs/clientlib-site/resources/fonts/fa-solid-900.woff2') format('woff2')
+  //font-display: $fa-font-display;
+  //src: url('#{$fa-font-path}/fa-solid-900.eot');
+  //src: url('#{$fa-font-path}/fa-solid-900.eot?#iefix') format('embedded-opentype'),
+  //url('/etc.clientlibs/mysite/clientlibs/clientlib-site/resources/fonts/fa-solid-900.woff2') format('woff2'),
+  //url('#{$fa-font-path}/fa-solid-900.woff') format('woff'),
+  //url('#{$fa-font-path}/fa-solid-900.ttf') format('truetype'),
+  //url('#{$fa-font-path}/fa-solid-900.svg#fontawesome') format('svg');
+}
+
 //@font-face{font-family:'Roboto Slab';font-style:normal;font-weight:400;src:url('clientlib-themes/core-components-clean/resources/fonts/roboto-slab-v9-latin-regular.eot');src:local('Roboto Slab Regular'),local('RobotoSlab-Regular'),url('clientlib-themes/core-components-clean/resources/fonts/roboto-slab-v9-latin-regular.eot?#iefix') format('embedded-opentype'),url('/etc.clientlibs/mysite/clientlibs/clientlib-site/resources/fonts/roboto-slab-v9-latin-regular.woff2') format('woff2'),url('clientlib-themes/core-components-clean/resources/fonts/roboto-slab-v9-latin-regular.woff') format('woff'),url('clientlib-themes/core-components-clean/resources/fonts/roboto-slab-v9-latin-regular.ttf') format('truetype'),url('clientlib-themes/core-components-clean/resources/fonts/roboto-slab-v9-latin-regular.svg#RobotoSlab') format('svg')}

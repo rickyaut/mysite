@@ -10,18 +10,19 @@ jQuery(function($) {
             greetingLabel = $('#mysiteGreetingLabel'),
             greetingText = greetingLabel.text(),
             body = $('body');
+        if(currentUserUrl){
+            $.getJSON(currentUserUrl + "?nocache=" + new Date().getTime(), function(currentUser) {
+                const isAnonymous = 'anonymous' === currentUser.authorizableId;
 
-        $.getJSON(currentUserUrl + "?nocache=" + new Date().getTime(), function(currentUser) {
-            const isAnonymous = 'anonymous' === currentUser.authorizableId;
-
-            if(isAnonymous) {
-                signIn.show();
-                body.addClass('anonymous');
-            } else {
-                signOut.show();
-                greetingLabel.text(greetingText + ", " + currentUser.name);
-                greetingLabel.show();
-            }
-        });
+                if(isAnonymous) {
+                    signIn.show();
+                    body.addClass('anonymous');
+                } else {
+                    signOut.show();
+                    greetingLabel.text(greetingText + ", " + currentUser.name);
+                    greetingLabel.show();
+                }
+            });
+        }
     })();
 });
