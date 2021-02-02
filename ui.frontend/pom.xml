@@ -24,7 +24,7 @@
     <parent>
         <groupId>com.mysite</groupId>
         <artifactId>mysite</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -33,7 +33,7 @@
     <!-- ====================================================================== -->
     <artifactId>mysite.ui.frontend</artifactId>
     <packaging>pom</packaging>
-    <name>mysite.ui.frontend - UI Frontend</name>
+    <name>My Site - UI Frontend</name>
 
 
     <!-- ====================================================================== -->

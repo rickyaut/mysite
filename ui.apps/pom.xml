@@ -23,7 +23,7 @@
     <parent>
         <groupId>com.mysite</groupId>
         <artifactId>mysite</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -47,44 +47,18 @@
             <plugin>
                 <groupId>org.apache.jackrabbit</groupId>
                 <artifactId>filevault-package-maven-plugin</artifactId>
-                <extensions>true</extensions>
                 <configuration>
                     <group>com.mysite</group>
                     <name>mysite.ui.apps</name>
                     <packageType>application</packageType>
                     <accessControlHandling>merge</accessControlHandling>
-                    <properties>
-                        <cloudManagerTarget>none</cloudManagerTarget>
-                    </properties>
                     <repositoryStructurePackages>
                         <repositoryStructurePackage>
                             <groupId>com.mysite</groupId>
                             <artifactId>mysite.ui.apps.structure</artifactId>
                         </repositoryStructurePackage>
                     </repositoryStructurePackages>
-                    <embeddeds>
-                        <embedded>
-                            <groupId>com.adobe.cq</groupId>
-                            <artifactId>core.wcm.components.core</artifactId>
-                            <target>/apps/mysite/install</target>
-                        </embedded>
-                        <embedded>
-                            <groupId>com.mysite</groupId>
-                            <artifactId>mysite.core</artifactId>
-                            <target>/apps/mysite/install</target>
-                        </embedded>
-                    </embeddeds>
-                    <subPackages>
-                    </subPackages>
                     <dependencies>
-                        <dependency>
-                            <groupId>com.adobe.cq</groupId>
-                            <artifactId>core.wcm.components.content</artifactId>
-                        </dependency>
-                        <dependency>
-                            <groupId>com.adobe.cq</groupId>
-                            <artifactId>core.wcm.components.config</artifactId>
-                        </dependency>
                     </dependencies>
                 </configuration>
             </plugin>
@@ -141,12 +115,6 @@
             <type>zip</type>
         </dependency>
 
-
-        <dependency>
-            <groupId>com.adobe.cq</groupId>
-            <artifactId>core.wcm.components.core</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>com.mysite</groupId>
             <artifactId>mysite.ui.apps.structure</artifactId>
@@ -155,36 +123,10 @@
         </dependency>
 
         <dependency>
-            <groupId>com.adobe.cq</groupId>
-            <artifactId>core.wcm.components.content</artifactId>
-            <type>zip</type>
-        </dependency>
-
-        <dependency>
-            <groupId>com.adobe.cq</groupId>
-            <artifactId>core.wcm.components.config</artifactId>
-            <type>zip</type>
-        </dependency>
-        <dependency>
             <groupId>com.adobe.aem</groupId>
-            <artifactId>uber-jar</artifactId>
-            <classifier>apis</classifier>
+            <artifactId>aem-sdk-api</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>javax.jcr</groupId>
-            <artifactId>jcr</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.day.cq.wcm</groupId>
-            <artifactId>cq-wcm-taglib</artifactId>
-        </dependency>
         <!-- HTL dependencies needed for the HTL Maven Plugin source code generation -->
         <dependency>
             <groupId>org.apache.sling</groupId>
