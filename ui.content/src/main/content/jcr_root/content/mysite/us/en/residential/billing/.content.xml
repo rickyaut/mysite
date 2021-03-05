@@ -6,9 +6,9 @@
         cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
         cq:template="/conf/mysite/settings/wcm/templates/page-content"
         jcr:primaryType="cq:PageContent"
-        jcr:title="page2"
+        jcr:title="billing"
         sling:resourceType="mysite/components/structure/page"
-        pageTitle="Page 2">
+        pageTitle="Billing">
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="mysite/components/content/container"

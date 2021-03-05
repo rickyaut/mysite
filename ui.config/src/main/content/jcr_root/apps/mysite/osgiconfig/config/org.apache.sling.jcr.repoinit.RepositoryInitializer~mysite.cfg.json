@@ -1,0 +1,13 @@
+{
+  "scripts":[
+    "create group mysiteviewer",
+    "set ACL for mysiteviewer\n  allow jcr:read on /, /libs, /content/cq:tags/mysite, /content/dam/mysite, /conf/global/settings/dam\nend",
+    "create group mysiteadmin",
+    "set ACL for mysiteadmin\n  allow jcr:read, jcr:versionManagement, rep:write, jcr:lockManagement on /content/cq:tags/mysite, /content/dam/mysite\nend",
+    "create user mysiteviewer1 with password mysiteviewer1",
+    "create user mysiteadmin1 with password mysiteadmin1",
+    "add mysiteviewer1 to group mysiteviewer",
+    "add mysiteadmin1 to group mysiteadmin",
+    "add mysiteadmin to group mysiteviewer"
+  ]
+}

@@ -3,9 +3,9 @@
 This is a project generated from `aem-project-archetype` using following maven command. It is intended as a best-practice set of examples as well as a potential starting point to develop your own functionality.
 ```
 mvn -Padobe-public -B archetype:generate \
-    -D archetypeGroupId=com.adobe.granite.archetypes \
+    -D archetypeGroupId=com.adobe.aem \
     -D archetypeArtifactId=aem-project-archetype \
-    -D archetypeVersion=24 \
+    -D archetypeVersion=25 \
     -D aemVersion=cloud \
     -D appTitle="My Site" \
     -D appId="mysite" \

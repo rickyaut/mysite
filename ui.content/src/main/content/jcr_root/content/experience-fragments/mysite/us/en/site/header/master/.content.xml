@@ -26,7 +26,7 @@
                 collectAllPages="false"
                 navigationRoot="/content/mysite/us/en"
                 skipNavigationRoot="false"
-                structureDepth="1">
+                structureDepth="2">
                 <cq:responsive jcr:primaryType="nt:unstructured">
                     <default
                             jcr:primaryType="nt:unstructured"
