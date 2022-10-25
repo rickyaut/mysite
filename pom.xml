@@ -769,6 +769,12 @@ Bundle-DocURL:
                 <version>1.0.1</version>
                 <scope>test</scope>
             </dependency>
+            <dependency>
+                <groupId>com.adobe.acs</groupId>
+                <artifactId>acs-aem-commons-content</artifactId>
+                <version>5.4.0</version>
+                <type>zip</type>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

@@ -94,6 +94,14 @@
                             <type>zip</type>
                             <target>/apps/mysite-vendor-packages/application/install</target>
                         </embedded>
+                        <embedded>
+                            <groupId>com.adobe.acs</groupId>
+                            <artifactId>acs-aem-commons-content</artifactId>
+                            <type>zip</type>
+                            <target>/apps/mysite-vendor-packages/application/install</target>
+                            <filter>true</filter>
+                            <isAllVersionsFilter>true</isAllVersionsFilter>
+                        </embedded>
                     </embeddeds>
                 </configuration>
             </plugin>
@@ -210,6 +218,11 @@
         <dependency>
             <groupId>com.adobe.cq</groupId>
             <artifactId>core.wcm.components.config</artifactId>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.acs</groupId>
+            <artifactId>acs-aem-commons-content</artifactId>
             <type>zip</type>
         </dependency>
     </dependencies>
