@@ -5,21 +5,12 @@
         cq:deviceGroups="[mobile/groups/responsive]"
         cq:template="/conf/mysite/settings/wcm/templates/xf-web-variation"
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="mysite/components/structure/page">
+        sling:resourceType="mysite/components/xfpage">
         <root
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="wcm/foundation/components/responsivegrid">
-            <responsivegrid
-                    jcr:created="{Date}2019-09-13T14:22:51.213-07:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2019-09-13T14:22:51.213-07:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wcm/foundation/components/responsivegrid"
-                    editable="{Boolean}true">
-                <cq:responsive jcr:primaryType="nt:unstructured"/>
-            </responsivegrid>
-        </root>
+            sling:resourceType="mysite/components/container"
+            editable="{Boolean}true"
+            layout="responsiveGrid"/>
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">
                 <phone

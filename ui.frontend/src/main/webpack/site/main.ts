@@ -3,10 +3,6 @@
 import "./main.scss";
 
 // Javascript or Typescript
-import './util.js';
-import './scroll-indicator';
-import '../components/content/languagenavigation/languagenavigation.js';
-import '../components/content/layout-container/modal.js';
-import '../components/content/navigation/navigation.js';
-import '../components/form/sign-in-buttons/sign-in-buttons.js';
-import '../components/form/sign-in-form/sign-in-form.js';
+import "./**/*.js";
+import "./**/*.ts";
+import '../components/**/*.js';

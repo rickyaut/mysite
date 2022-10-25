@@ -2,65 +2,123 @@
 
 This is a project generated from `aem-project-archetype` using following maven command. It is intended as a best-practice set of examples as well as a potential starting point to develop your own functionality.
 ```
-mvn -Padobe-public -B archetype:generate \
-    -D archetypeGroupId=com.adobe.granite.archetypes \
+mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate \
+    -D archetypeGroupId=com.adobe.aem \
     -D archetypeArtifactId=aem-project-archetype \
-    -D archetypeVersion=23 \
-    -D aemVersion=6.5 \
+    -D archetypeVersion=39\
+    -D aemVersion=6.5.7 \
     -D appTitle="My Site" \
     -D appId="mysite" \
     -D groupId="com.mysite" \
     -D frontendModule=general \
+    -D version="1.0-SNAPSHOT" \
     -D includeExamples=n
 ```
+
 ## Modules
 
 The main parts of the template are:
 
 * core: Java bundle containing all core functionality like OSGi services, listeners or schedulers, as well as component-related Java code such as servlets or request filters.
-* ui.apps: contains the /apps (and /etc) parts of the project, ie JS&CSS clientlibs, components, templates, runmode specific configs as well as Hobbes-tests
+* it.tests: Java based integration tests
+* ui.apps: contains the /apps (and /etc) parts of the project, ie JS&CSS clientlibs, components, and templates
 * ui.content: contains sample content using the components from the ui.apps
-* ui.tests: Java bundle containing JUnit tests that are executed server-side. This bundle is not to be deployed onto production.
-* ui.launcher: contains glue code that deploys the ui.tests bundle (and dependent bundles) to the server and triggers the remote JUnit execution
+* ui.config: contains runmode specific OSGi configs for the project
 * ui.frontend: an optional dedicated front-end build mechanism (Angular, React or general Webpack project)
+* ui.tests: Selenium based UI tests
+* all: a single content package that embeds all of the compiled modules (bundles and content packages) including any vendor dependencies
+* analyse: this module runs analysis on the project which provides additional validation for deploying into AEMaaCS
 
 ## How to build
 
 To build all the modules run in the project root directory the following command with Maven 3:
 
-    mvn clean install -Padobe-public
+    mvn clean install
 
-If you have a running AEM instance you can build and package the whole project and deploy into AEM with
+To build all the modules and deploy the `all` package to a local instance of AEM, run in the project root directory the following command:
 
-    mvn clean install -PautoInstallPackage -Padobe-public
+    mvn clean install -PautoInstallSinglePackage
 
 Or to deploy it to a publish instance, run
 
-    mvn clean install -PautoInstallPackagePublish -Padobe-public
+    mvn clean install -PautoInstallSinglePackagePublish
 
 Or alternatively
 
-    mvn clean install -PautoInstallPackage -Padobe-public -Daem.port=4503
+    mvn clean install -PautoInstallSinglePackage -Daem.port=4503
 
 Or to deploy only the bundle to the author, run
 
-    mvn clean install -PautoInstallBundle -Padobe-public
+    mvn clean install -PautoInstallBundle
+
+Or to deploy only a single content package, run in the sub-module directory (i.e `ui.apps`)
+
+    mvn clean install -PautoInstallPackage
 
 ## Testing
 
 There are three levels of testing contained in the project:
 
-* unit test in core: this show-cases classic unit testing of the code contained in the bundle. To test, execute:
+### Unit tests
 
-    mvn clean test -Padobe-public
+This show-cases classic unit testing of the code contained in the bundle. To
+test, execute:
 
-* server-side integration tests: this allows to run unit-like tests in the AEM-environment, ie on the AEM server. To test, execute:
+    mvn clean test
 
-    mvn clean verify -PintegrationTests -Padobe-public
+### Integration tests
 
-* client-side Hobbes.js tests: JavaScript-based browser-side tests that verify browser-side behavior. To test:
+This allows running integration tests that exercise the capabilities of AEM via
+HTTP calls to its API. To run the integration tests, run:
 
-    in the browser, open the page in 'Developer mode', open the left panel and switch to the 'Tests' tab and find the generated 'MyName Tests' and run them.
+    mvn clean verify -Plocal
+
+Test classes must be saved in the `src/main/java` directory (or any of its
+subdirectories), and must be contained in files matching the pattern `*IT.java`.
+
+The configuration provides sensible defaults for a typical local installation of
+AEM. If you want to point the integration tests to different AEM author and
+publish instances, you can use the following system properties via Maven's `-D`
+flag.
+
+| Property | Description | Default value |
+| --- | --- | --- |
+| `it.author.url` | URL of the author instance | `http://localhost:4502` |
+| `it.author.user` | Admin user for the author instance | `admin` |
+| `it.author.password` | Password of the admin user for the author instance | `admin` |
+| `it.publish.url` | URL of the publish instance | `http://localhost:4503` |
+| `it.publish.user` | Admin user for the publish instance | `admin` |
+| `it.publish.password` | Password of the admin user for the publish instance | `admin` |
+
+The integration tests in this archetype use the [AEM Testing
+Clients](https://github.com/adobe/aem-testing-clients) and showcase some
+recommended [best
+practices](https://github.com/adobe/aem-testing-clients/wiki/Best-practices) to
+be put in use when writing integration tests for AEM.
+
+## Static Analysis
+
+The `analyse` module performs static analysis on the project for deploying into AEMaaCS. It is automatically
+run when executing
+
+    mvn clean install
+
+from the project root directory. Additional information about this analysis and how to further configure it
+can be found here https://github.com/adobe/aemanalyser-maven-plugin
+
+### UI tests
+
+They will test the UI layer of your AEM application using Selenium technology. 
+
+To run them locally:
+
+    mvn clean verify -Pui-tests-local-execution
+
+This default command requires:
+* an AEM author instance available at http://localhost:4502 (with the whole project built and deployed on it, see `How to build` section above)
+* Chrome browser installed at default location
+
+Check README file in `ui.tests` module for more details.
 
 ## ClientLibs
 

@@ -33,7 +33,7 @@
     <!-- ====================================================================== -->
     <artifactId>mysite.ui.frontend</artifactId>
     <packaging>pom</packaging>
-    <name>mysite.ui.frontend - UI Frontend</name>
+    <name>My Site - UI Frontend</name>
 
 
     <!-- ====================================================================== -->
@@ -61,7 +61,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.1.1</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
