@@ -124,6 +124,10 @@ Import-Package: javax.annotation;version=0.0.0,*
                     <groupId>org.slf4j</groupId>
                     <artifactId>slf4j-simple</artifactId>
                 </exclusion>
+                <exclusion>
+                    <groupId>org.apache.commons</groupId>
+                    <artifactId>commons-imaging</artifactId>
+                </exclusion>
             </exclusions>
             <scope>test</scope>
         </dependency>
