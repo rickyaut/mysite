@@ -80,6 +80,14 @@
                             <type>zip</type>
                             <target>/apps/mysite-packages/application/install</target>
                         </embedded>
+                        <!-- Workfront Tools -->
+                        <embedded>
+                            <groupId>digital.hoodoo</groupId>
+                            <artifactId>workfront-tools.ui.apps</artifactId>
+                            <type>zip</type>
+                            <target>/apps/mysite-vendor-packages/application/install</target>
+                        </embedded>
+
                     </embeddeds>
                 </configuration>
             </plugin>
@@ -188,5 +196,12 @@
             <type>zip</type>
         </dependency>
 
+        <dependency>
+            <groupId>digital.hoodoo</groupId>
+            <artifactId>workfront-tools.ui.apps</artifactId>
+            <type>zip</type>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/../ui.apps/src/main/resources/workfront-tools.ui.apps.zip</systemPath>
+        </dependency>
     </dependencies>
 </project>
