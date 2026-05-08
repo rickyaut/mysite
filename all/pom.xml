@@ -65,6 +65,22 @@
                             <artifactId>mysite.core</artifactId>
                             <target>/apps/mysite-packages/application/install</target>
                         </embedded>
+                        <!-- OAuth OSGi bundles -->
+                        <embedded>
+                            <groupId>com.restfb</groupId>
+                            <artifactId>restfb</artifactId>
+                            <target>/apps/mysite-packages/application/install</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.google.guava</groupId>
+                            <artifactId>guava</artifactId>
+                            <target>/apps/mysite-packages/application/install</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.google.guava</groupId>
+                            <artifactId>failureaccess</artifactId>
+                            <target>/apps/mysite-packages/application/install</target>
+                        </embedded>
                         <embedded>
                             <groupId>com.mysite</groupId>
                             <artifactId>mysite.ui.content</artifactId>
@@ -195,6 +211,22 @@
             <artifactId>mysite.ui.config</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
+        </dependency>
+        <!-- OAuth OSGi bundles -->
+        <dependency>
+            <groupId>com.restfb</groupId>
+            <artifactId>restfb</artifactId>
+            <version>2023.11.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>31.1-jre</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>failureaccess</artifactId>
+            <version>1.0.1</version>
         </dependency>
 
     </dependencies>

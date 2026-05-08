@@ -1,0 +1,10 @@
+{
+  "google.client.id": "",
+  "google.client.secret": "",
+  "facebook.app.id": "",
+  "facebook.app.secret": "",
+  "azure.client.id": "",
+  "azure.client.secret": "",
+  "azure.tenant.id": "",
+  "redirect.uri": "http://localhost:4502/bin/oauth/callback"
+}
