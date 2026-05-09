@@ -65,6 +65,12 @@
                             <artifactId>mysite.core</artifactId>
                             <target>/apps/mysite-packages/application/install</target>
                         </embedded>
+                        <!-- PostgreSQL JDBC Driver -->
+                        <embedded>
+                            <groupId>org.postgresql</groupId>
+                            <artifactId>postgresql</artifactId>
+                            <target>/apps/mysite-packages/application/install</target>
+                        </embedded>
                         <!-- OAuth OSGi bundles -->
                         <embedded>
                             <groupId>com.restfb</groupId>
@@ -211,6 +217,12 @@
             <artifactId>mysite.ui.config</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
+        </dependency>
+        <!-- PostgreSQL JDBC Driver -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.3</version>
         </dependency>
         <!-- OAuth OSGi bundles -->
         <dependency>

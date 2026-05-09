@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:fdm="http://www.adobe.com/aemfd/fdm/1.0"
+          jcr:primaryType="dam:AssetContent"
+          type="adaptiveform"
+          sling:resourceType="fd/af/components/page2"
+          cq:conf="/conf/mysite">
+    <guideContainer
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="fd/af/components/guideContainer"
+        jcr:title="Create Order"
+        fdmRef="/content/dam/formsanddocuments-fdm/order-fdm"
+        submitAction="fd/af/components/actions/fdmInvokeService"
+        submitServiceName="insert"
+        submitServiceDataModel="orders"
+        thankyouMessage="Your order has been submitted successfully."
+        thankyouConfig="message">
+        <rootPanel
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="fd/af/components/panel"
+            jcr:title="Root Panel"
+            layout="responsiveGrid">
+            <items jcr:primaryType="nt:unstructured">
+                <customer_id
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/guidetextbox"
+                    jcr:title="Customer ID"
+                    name="customer_id"
+                    bindRef="orders/customer_id"
+                    dataType="string"
+                    required="{Boolean}true"
+                    requiredMessage="Customer ID is required"
+                    placeHolder="Enter customer ID"/>
+                <amount
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/guidenumericbox"
+                    jcr:title="Amount"
+                    name="amount"
+                    bindRef="orders/amount"
+                    dataType="number"
+                    required="{Boolean}true"
+                    requiredMessage="Amount is required"
+                    minimum="{Double}0.0"
+                    placeHolder="Enter amount"
+                    displayPattern="num{$#,##0.00}"/>
+                <status
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/guidedropdownlist"
+                    jcr:title="Status"
+                    name="status"
+                    bindRef="orders/status"
+                    dataType="string"
+                    required="{Boolean}true"
+                    requiredMessage="Status is required"
+                    enumNames="[Pending,Processing,Shipped,Delivered,Cancelled]"
+                    enum="[pending,processing,shipped,delivered,cancelled]"/>
+                <submitButton
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/guidebutton"
+                    jcr:title="Submit Order"
+                    name="submitButton"
+                    buttonType="submit"
+                    value="Submit Order"/>
+            </items>
+        </rootPanel>
+    </guideContainer>
+    <renditions jcr:primaryType="nt:folder"/>
+    <related jcr:primaryType="nt:unstructured"/>
+    <metadata
+        jcr:primaryType="nt:unstructured"
+        title="Create Order"
+        dc:title="Create Order"
+        dc:format="application/x-adobe-aemfd-af"
+        afApplicationPath="/content/dam/formsanddocuments/order-form"/>
+</jcr:root>

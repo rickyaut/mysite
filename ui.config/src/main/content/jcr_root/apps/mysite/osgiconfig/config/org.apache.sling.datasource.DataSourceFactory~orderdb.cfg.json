@@ -1,0 +1,14 @@
+{
+    "datasource.name": "orderdb",
+    "driverClassName": "org.postgresql.Driver",
+    "url": "jdbc:postgresql://localhost:5432/orderdb",
+    "username": "order",
+    "password": "password",
+    "defaultAutoCommit": true,
+    "testOnBorrow": true,
+    "validationQuery": "SELECT 1",
+    "maxActive": 10,
+    "maxIdle": 5,
+    "minIdle": 2,
+    "maxWait": 30000
+}

@@ -7,5 +7,8 @@
         <include pattern="/content/dam/mysite/jcr:content(/.*)?"/>
     </filter>
     <filter root="/content/dam/mysite/asset.jpg" mode="merge"/>
+    <filter root="/content/dam/formsanddocuments-fdm/order-fdm" mode="replace"/>
+    <filter root="/content/dam/formsanddocuments" mode="merge"/>
+    <filter root="/content/dam/formsanddocuments/order-form" mode="replace"/>
     <filter root="/content/experience-fragments/mysite" mode="merge"/>
 </workspaceFilter>

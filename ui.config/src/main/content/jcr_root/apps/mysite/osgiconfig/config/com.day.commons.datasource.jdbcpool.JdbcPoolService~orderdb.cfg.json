@@ -1,0 +1,12 @@
+{
+    "datasource.name": "orderdb",
+    "jdbc.driver.class": "org.postgresql.Driver",
+    "jdbc.connection.uri": "jdbc:postgresql://localhost:5432/orderdb",
+    "jdbc.username": "order",
+    "jdbc.password": "password",
+    "jdbc.validation.query": "SELECT 1",
+    "pool.size.max": 10,
+    "pool.size.min": 2,
+    "pool.idle.timeout": 600000,
+    "pool.max.wait": 30000
+}

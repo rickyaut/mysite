@@ -1,7 +1,8 @@
 {
     "scripts": [
-        "create path (sling:OrderedFolder) /content/dam/mysite",
-        "create path (nt:unstructured) /content/dam/mysite/jcr:content",
-        "set properties on /content/dam/mysite/jcr:content\n  set cq:conf{String} to /conf/mysite\n  set jcr:title{String} to \"My Site\"\nend"
+        "create path (sling:OrderedFolder) /content/dam/mysite\ncreate path (nt:unstructured) /content/dam/mysite/jcr:content\nset properties on /content/dam/mysite/jcr:content\n  set cq:conf{String} to /conf/mysite\n  set jcr:title{String} to \"My Site\"\nend",
+        "create path (sling:Folder) /content/dam/formsanddocuments\nadd mixin rep:AccessControllable to /content/dam/formsanddocuments\nset ACL on /content/dam/formsanddocuments\n  allow jcr:read for everyone\n  allow jcr:read,rep:write,jcr:modifyAccessControl for fd-service\nend\ncreate path (sling:Folder) /content/dam/formsanddocuments-fdm\nadd mixin rep:AccessControllable to /content/dam/formsanddocuments-fdm",
+        "create path (sling:Folder) /conf/mysite/settings/wcm/templates/af-blank-v2",
+        "create path (sling:Folder) /conf/global/settings/cloudconfigs/fdm"
     ]
 }
