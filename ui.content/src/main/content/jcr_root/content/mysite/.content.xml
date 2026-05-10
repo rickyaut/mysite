@@ -7,6 +7,8 @@
         cq:conf="/conf/mysite"
         cq:redirectTarget="/content/mysite/us/en"
         cq:template="/conf/mysite/settings/wcm/templates/page-content"
+        cq:graphqlClient="default"
+        magentoStore="default"
         jcr:primaryType="cq:PageContent"
         jcr:title="My Site"
         sling:configRef="/conf/mysite"

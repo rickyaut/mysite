@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" 
+    jcr:primaryType="sling:Folder"
+    jcr:title="Commerce">
+    <jcr:content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/gui/components/configuration/page"
+        jcr:title="Commerce Configuration"
+        cq:graphqlClient="default"
+        magentoGraphqlEndpoint="http://localhost/graphql"
+        magentoStore="default"
+        magentoRootCategoryId="2"
+        enableUIDSupport="{Boolean}false"
+        cq:conf="/conf/mysite"/>
+</jcr:root>

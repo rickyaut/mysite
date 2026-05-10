@@ -1,6 +1,6 @@
 {
-  "alloworigin": ["http://localhost:3000"],
-  "allowedpaths": ["/(content|conf)/mysite.*"],
+  "alloworigin": ["http://localhost:3000", "http://localhost"],
+  "allowedpaths": ["/(content|conf)/mysite.*", "/api/graphql"],
   "supportedheaders": [
     "Authorization",
     "Origin",
@@ -8,8 +8,9 @@
     "X-Requested-With",
     "Content-Type",
     "Access-Control-Request-Method",
-    "Access-Control-Request-Headers"
+    "Access-Control-Request-Headers",
+    "Store"
   ],
-  "supportedmethods": ["GET","HEAD"],
+  "supportedmethods": ["GET", "HEAD", "POST"],
   "alloworiginregexp": []
 }

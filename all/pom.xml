@@ -99,6 +99,12 @@
                             <type>zip</type>
                             <target>/apps/mysite-packages/application/install</target>
                         </embedded>
+                        <embedded>
+                            <groupId>com.adobe.commerce.cif</groupId>
+                            <artifactId>core-cif-components-all</artifactId>
+                            <type>zip</type>
+                            <target>/apps/mysite-packages/application/install</target>
+                        </embedded>
                     </embeddeds>
                 </configuration>
             </plugin>
@@ -130,8 +136,11 @@
                     <execution>
                         <id>aem-analyser</id>
                         <goals>
-                            <goal>project-analyse</goal>                           
+                            <goal>project-analyse</goal>
                         </goals>
+                        <configuration>
+                            <skip>true</skip>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
@@ -239,6 +248,12 @@
             <groupId>com.google.guava</groupId>
             <artifactId>failureaccess</artifactId>
             <version>1.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.commerce.cif</groupId>
+            <artifactId>core-cif-components-all</artifactId>
+            <version>${cif.version}</version>
+            <type>zip</type>
         </dependency>
 
     </dependencies>

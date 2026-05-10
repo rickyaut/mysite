@@ -33,6 +33,7 @@
     <module>ui.tests</module>
   </modules>
   <properties>
+    <cif.version>2.27.0</cif.version>
     <aem.host>localhost</aem.host>
     <aem.port>4502</aem.port>
     <aem.publish.host>localhost</aem.publish.host>
@@ -523,6 +524,12 @@ Bundle-DocURL:
         <groupId>com.adobe.cq</groupId>
         <artifactId>core.wcm.components.core</artifactId>
         <version>${core.wcm.components.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.adobe.commerce.cif</groupId>
+        <artifactId>core-cif-components-core</artifactId>
+        <version>${cif.version}</version>
+        <scope>provided</scope>
       </dependency>
       <!-- Testing -->
       <dependency>

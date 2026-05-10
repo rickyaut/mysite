@@ -1,0 +1,4 @@
+{
+  "org.apache.sling.commons.log.level": "error",
+  "org.apache.sling.commons.log.names": ["com.adobe.cq.dam.cfm.headless.ui.impl.models.CFHomeCardModelImpl"]
+}

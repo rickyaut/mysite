@@ -1,0 +1,6 @@
+{
+  "productPageUrlFormat": "{{page}}.{{url_key}}.html#{{variant_sku}}",
+  "categoryPageUrlFormat": "{{page}}.{{url_path}}.html",
+  "productPageUrlTemplate": "/content/mysite/us/en/products/product-page",
+  "categoryPageUrlTemplate": "/content/mysite/us/en/products/category-page"
+}

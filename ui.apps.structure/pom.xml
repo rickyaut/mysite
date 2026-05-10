@@ -42,6 +42,8 @@
                         <filter><root>/apps/dam</root></filter>
                         <filter><root>/apps/wcm</root></filter>
                         <filter><root>/apps/msm</root></filter>
+                        <!-- CIF component roots -->
+                        <filter><root>/libs/core/cif</root></filter>
 
                         <!-- Immutable context-aware configurations -->
                         <filter><root>/apps/settings</root></filter>

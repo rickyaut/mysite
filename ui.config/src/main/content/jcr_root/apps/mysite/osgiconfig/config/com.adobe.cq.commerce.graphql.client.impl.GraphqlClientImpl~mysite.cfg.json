@@ -1,0 +1,7 @@
+{
+  "identifier": "default",
+  "url": "http://localhost/graphql",
+  "httpMethod": "POST",
+  "acceptSelfSignedCertificates": false,
+  "allowHttpProtocol": true
+}
